@@ -51,35 +51,30 @@ class Logger(object):
     def debug(self, message, exception=None):
         output = self.formatMessage(message, exception)
         if logging.getLevelName("DEBUG") >= self.logger.level:
-            print(output)
             if self.outputToFile:
                 self.logger.debug(output)
 
     def info(self, message, exception=None):
         output = self.formatMessage(message, exception)
         if logging.getLevelName("INFO") >= self.logger.level:
-            print(output)
             if self.outputToFile:
                 self.logger.info(output)
 
     def warn(self, message, exception=None):
         output = self.formatMessage(message, exception)
         if logging.getLevelName("WARN") >= self.logger.level:
-            print(output)
             if self.outputToFile:
                 self.logger.warning(output)
 
     def error(self, message, exception=None):
         output = self.formatMessage(message, exception)
         if logging.getLevelName("ERROR") >= self.logger.level:
-            print(output)
             if self.outputToFile:
                 self.logger.error(output)
 
     def critical(self, message, exception=None):
         output = self.formatMessage(message, exception)
         if logging.getLevelName("CRITICAL") >= self.logger.level:
-            print(output)
             if self.outputToFile:
                 self.logger.critical(output)
 
