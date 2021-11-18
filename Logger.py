@@ -18,7 +18,7 @@ class Logger(object):
             os.mkdir(logsDirectory)
 
         # Get the log file with the date appended to it and set up basic logging
-        formatted_date_time = datetime.datetime.now().strftime("%Y%m%d-%I%M%S")
+        formatted_date_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         logFilePath = os.path.join(
             logsDirectory, "{0} - LOGS.txt".format(formatted_date_time)
         )
